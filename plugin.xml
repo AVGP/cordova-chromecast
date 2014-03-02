@@ -16,5 +16,5 @@
         </config-file>
     </platform>
     <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" commit="master" />
-    <dependency id="com.google.android-support" url="https://github.com/AVGP/android-support" commit="master" />
+    <dependency id="com.google.androidsupport" url="https://github.com/AVGP/android-support" commit="master" />
 </plugin>
