@@ -1,19 +1,20 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="org.apache.cordova.plugin.chromecast" version="0.0.1">
+            id="org.apache.cordova.plugin.Chromecast" version="0.0.1">
     <name>Chromecast</name>
     <description>Cordova Chromecast Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,chromecast</keywords>
     <js-module src="chromecast.js" name="chromecast">
-        <clobbers target="chromecast" />
+        <clobbers target="window.chromecast" />
     </js-module>
     <platform name="android">
-        <config-file target="config.xml" parent="/*">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Chromecast">
-                <param name="android-package" value="org.apache.cordova.plugin.chromecast"/>
+                <param name="android-package" value="org.apache.cordova.plugin.chromecast.Chromecast"/>
             </feature>
         </config-file>
+        <source-file src="src/org/apache/cordova/plugin/chromecast/Chromecast.java" target-dir="src/org/apache/cordova/plugin/chromecast" />
     </platform>
     <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" commit="master" />
     <dependency id="com.google.androidsupport" url="https://github.com/AVGP/android-support" commit="master" />
