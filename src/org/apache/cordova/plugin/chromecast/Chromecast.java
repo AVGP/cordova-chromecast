@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin;
+package org.apache.cordova.plugin.chromecast;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -13,12 +13,12 @@ public class Chromecast extends CordovaPlugin {
 		if(action.equals("echo")) {
 			this.echo(args.getString(0), callbackContext);
 			return true;
-		}
+		} 
 		return false;
 	}
 
 	private void echo(String msg, CallbackContext callback) {
-		callback.success(msg);
+        callback.success(msg);
 	}
 }
 
